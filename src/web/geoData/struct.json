@@ -1,0 +1,58 @@
+{
+  "name": "powerplant_p1",
+  "i18n": {
+    "en-US": "",
+    "zh-CN": ""
+  },
+  "workshop": {
+    "boiler_w1": {
+      "name": "boiler_w1",
+      "i18n": {
+        "en-US": "",
+        "zh-CN": ""
+      },
+      "boiler": {
+        "boiler_m1": {
+          "name": "boiler_m1",
+          "i18n": {
+            "en-US": "",
+            "zh-CN": ""
+          },
+          "class": [
+            {
+              "fqn": "{power}Boiler",
+              "i18n": {
+                "en-US": "Boiler",
+                "zh-CN": "锅炉"
+              }
+            }
+          ]
+        }
+      },
+      "class": [
+        {
+          "fqn": "{power}BoilerWorkshop",
+          "i18n": {
+            "en-US": "BoilerWorkshop",
+            "zh-CN": "锅炉车间"
+          }
+        }
+      ],
+      "related": [
+        {
+          "type": "relation_0",
+          "destination": "powerplant_p1|boiler_w1|boiler_m1"
+        }
+      ]
+    }
+  },
+  "class": [
+    {
+      "fqn": "{power}PowerPlant",
+      "i18n": {
+        "en-US": "PowerPlant",
+        "zh-CN": "电厂"
+      }
+    }
+  ]
+}

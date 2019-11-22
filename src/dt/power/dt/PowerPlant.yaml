@@ -1,0 +1,163 @@
+---
+apiVersion: thingswise.com/v1
+kind: entity
+metadata:
+  label:
+    i18n: {en-US: PowerPlant, zh-CN: 电厂}
+spec:
+  class: PowerPlant
+  key: powerplant
+  lookups:
+  - {lookup_domain: Lookup, lookup_field: powerplant, name: default}
+  rollup: true
+  superclass: []
+  tags: []
+  timezone: Asia/Shanghai
+---
+apiVersion: thingswise.com/v1
+kind: primaryDataDomain
+spec:
+  class: PowerPlant
+  fields:
+  - category: []
+    index: true
+    name: powerplant
+    type: string
+  kind: lookup
+  name: Lookup
+---
+apiVersion: thingswise.com/v1
+kind: primaryDataDomain
+spec:
+  class: PowerPlant
+  fields:
+  - category: []
+    label:
+      i18n: {en-US: Name}
+    name: Name
+    type: string
+  name: Basic
+---
+apiVersion: thingswise.com/v1
+kind: operationalDataDomain
+metadata: {}
+spec:
+  class: PowerPlant
+  fields:
+  - aggregated: true
+    category: [Final Product]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Electricity}
+    name: Generation.electricity
+    note:
+      i18n: {en-US: Electricity generation}
+    original_name: electricity
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: kWh}
+  - aggregated: true
+    category: [Pollution]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Carbon Dioxide}
+    name: Generation.co2
+    note:
+      i18n: {en-US: Carbon Dioxide}
+    original_name: co2
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: t}
+  - aggregated: true
+    category: [Steam]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    name: Generation.steam
+    original_name: steam
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: t}
+  name: Generation
+---
+apiVersion: thingswise.com/v1
+kind: operationalDataDomain
+metadata: {}
+spec:
+  class: PowerPlant
+  fields:
+  - aggregated: true
+    category: [Water]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Water}
+    name: Consumption.water
+    note:
+      i18n: {en-US: Water consumption}
+    original_name: water
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: m3}
+  - aggregated: true
+    category: [Air]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Air}
+    name: Consumption.air
+    note:
+      i18n: {en-US: Air consumption}
+    original_name: air
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: m3}
+  - aggregated: true
+    category: [Coal]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Coal}
+    name: Consumption.coal
+    note:
+      i18n: {en-US: Coal consumption}
+    original_name: coal
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: t}
+  - aggregated: true
+    category: [Electricity]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Electricity}
+    name: Consumption.electricity
+    note:
+      i18n: {en-US: Electricity consumption}
+    original_name: electricity
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: kWh}
+  name: Consumption

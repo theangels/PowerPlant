@@ -1,0 +1,17 @@
+mixins:
+- fields:
+    boiler: string
+    class: string
+    powerplant: string
+    workshop: string
+  name: Lookup
+- name: power___Boiler__Basic
+- name: power___Boiler__Monitoring
+- name: power___Boiler__Generation
+- name: power___Boiler__Consumption
+- name: power___BoilerWorkshop__Basic
+- name: power___BoilerWorkshop__Generation
+- name: power___BoilerWorkshop__Consumption
+- name: power___PowerPlant__Basic
+- name: power___PowerPlant__Generation
+- name: power___PowerPlant__Consumption

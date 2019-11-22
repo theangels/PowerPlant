@@ -1,0 +1,1064 @@
+{
+  "apiVersion": "thingswise.com/v1",
+  "labels": {},
+  "model_hierarchy": [
+    {
+      "i18n": {
+        "en-US": "PowerPlant",
+        "zh-CN": "\u7535\u5382"
+      },
+      "key": "powerplant",
+      "models": [
+        "{power}PowerPlant"
+      ]
+    },
+    {
+      "i18n": {
+        "en-US": "BoilerWorkshop",
+        "zh-CN": "\u9505\u7089\u8f66\u95f4"
+      },
+      "key": "workshop",
+      "models": [
+        "{power}BoilerWorkshop"
+      ]
+    },
+    {
+      "i18n": {
+        "en-US": "Boiler",
+        "zh-CN": "\u9505\u7089"
+      },
+      "key": "boiler",
+      "models": [
+        "{power}Boiler"
+      ]
+    }
+  ],
+  "models": {
+    "{power}Boiler": {
+      "key": "boiler",
+      "label": {
+        "i18n": {
+          "en-US": "Boiler",
+          "zh-CN": "\u9505\u7089"
+        }
+      },
+      "level": 2,
+      "lookups": [
+        {
+          "lookup_domain": "Lookup",
+          "lookup_field": "boiler",
+          "name": "default"
+        }
+      ],
+      "operational_domains": {
+        "Consumption": {
+          "fields": [
+            {
+              "aggregated": false,
+              "category": [
+                "Water"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Water"
+                }
+              },
+              "name": "Consumption.water",
+              "note": {
+                "i18n": {
+                  "en-US": "Water consumption"
+                }
+              },
+              "original_name": "water",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "m3"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [
+                "Air"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Air"
+                }
+              },
+              "name": "Consumption.air",
+              "note": {
+                "i18n": {
+                  "en-US": "Air consumption"
+                }
+              },
+              "original_name": "air",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "m3"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [
+                "Coal"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Coal"
+                }
+              },
+              "name": "Consumption.coal",
+              "note": {
+                "i18n": {
+                  "en-US": "Coal consumption"
+                }
+              },
+              "original_name": "coal",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [
+                "Electricity"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Electricity"
+                }
+              },
+              "name": "Consumption.electricity",
+              "note": {
+                "i18n": {
+                  "en-US": "Electricity consumption"
+                }
+              },
+              "original_name": "electricity",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "kWh"
+                }
+              }
+            }
+          ],
+          "mangled_name": "power___Boiler__Consumption"
+        },
+        "Generation": {
+          "fields": [
+            {
+              "aggregated": false,
+              "category": [
+                "Final Product"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Electricity"
+                }
+              },
+              "name": "Generation.electricity",
+              "note": {
+                "i18n": {
+                  "en-US": "Electricity generation"
+                }
+              },
+              "original_name": "electricity",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "kWh"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [
+                "Pollution"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Carbon Dioxide"
+                }
+              },
+              "name": "Generation.co2",
+              "note": {
+                "i18n": {
+                  "en-US": "Carbon Dioxide"
+                }
+              },
+              "original_name": "co2",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [
+                "Steam"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "name": "Generation.steam",
+              "original_name": "steam",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            }
+          ],
+          "mangled_name": "power___Boiler__Generation"
+        },
+        "Monitoring": {
+          "fields": [
+            {
+              "aggregated": false,
+              "category": [],
+              "decimals": 1,
+              "default_stats": "avg",
+              "index": false,
+              "kind": "direct",
+              "label": {
+                "i18n": {
+                  "en-US": "OutsideTemperature"
+                }
+              },
+              "name": "Monitoring.outside_temperature",
+              "original_name": "outside_temperature",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "\u2103"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [],
+              "decimals": 1,
+              "default_stats": "avg",
+              "index": false,
+              "kind": "direct",
+              "label": {
+                "i18n": {
+                  "en-US": "Load"
+                }
+              },
+              "name": "Monitoring.load",
+              "original_name": "load",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "MW"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [],
+              "decimals": 1,
+              "default_stats": "avg",
+              "index": false,
+              "kind": "direct",
+              "label": {
+                "i18n": {
+                  "en-US": "LoadPrediction"
+                }
+              },
+              "name": "Monitoring.load_prediction",
+              "original_name": "load_prediction",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "MW"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [],
+              "decimals": 1,
+              "default_stats": "avg",
+              "index": false,
+              "kind": "direct",
+              "label": {
+                "i18n": {
+                  "en-US": "SteamTemperature"
+                }
+              },
+              "name": "Monitoring.steam_temperature",
+              "original_name": "steam_temperature",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "\u2103"
+                }
+              }
+            },
+            {
+              "aggregated": false,
+              "category": [],
+              "decimals": 2,
+              "default_stats": "avg",
+              "index": false,
+              "kind": "direct",
+              "label": {
+                "i18n": {
+                  "en-US": "SteamPressure"
+                }
+              },
+              "name": "Monitoring.steam_pressure",
+              "original_name": "steam_pressure",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "MPa"
+                }
+              }
+            }
+          ],
+          "mangled_name": "power___Boiler__Monitoring"
+        }
+      },
+      "primary_domains": {
+        "Basic": {
+          "fields": [
+            {
+              "category": [],
+              "index": false,
+              "label": {
+                "i18n": {
+                  "en-US": "Name"
+                }
+              },
+              "name": "Name",
+              "resolution": [],
+              "type": "string"
+            }
+          ],
+          "kind": "metadata",
+          "mangled_name": "power___Boiler__Basic"
+        },
+        "Lookup": {
+          "fields": [
+            {
+              "category": [],
+              "index": true,
+              "name": "powerplant",
+              "resolution": [],
+              "type": "string"
+            },
+            {
+              "category": [],
+              "index": true,
+              "name": "workshop",
+              "resolution": [],
+              "type": "string"
+            },
+            {
+              "category": [],
+              "index": true,
+              "name": "boiler",
+              "resolution": [],
+              "type": "string"
+            }
+          ],
+          "kind": "lookup",
+          "mangled_name": "Lookup"
+        }
+      },
+      "rollup": true,
+      "scope": "{power}BoilerWorkshop",
+      "secondary_domains": {},
+      "superclass": [],
+      "tags": [],
+      "timezone": "Asia/Shanghai"
+    },
+    "{power}BoilerWorkshop": {
+      "key": "workshop",
+      "label": {
+        "i18n": {
+          "en-US": "BoilerWorkshop",
+          "zh-CN": "\u9505\u7089\u8f66\u95f4"
+        }
+      },
+      "level": 1,
+      "lookups": [
+        {
+          "lookup_domain": "Lookup",
+          "lookup_field": "workshop",
+          "name": "default"
+        }
+      ],
+      "operational_domains": {
+        "Consumption": {
+          "fields": [
+            {
+              "aggregated": true,
+              "category": [
+                "Water"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Water"
+                }
+              },
+              "name": "Consumption.water",
+              "note": {
+                "i18n": {
+                  "en-US": "Water consumption"
+                }
+              },
+              "original_name": "water",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "m3"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Air"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Air"
+                }
+              },
+              "name": "Consumption.air",
+              "note": {
+                "i18n": {
+                  "en-US": "Air consumption"
+                }
+              },
+              "original_name": "air",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "m3"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Coal"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Coal"
+                }
+              },
+              "name": "Consumption.coal",
+              "note": {
+                "i18n": {
+                  "en-US": "Coal consumption"
+                }
+              },
+              "original_name": "coal",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Electricity"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Electricity"
+                }
+              },
+              "name": "Consumption.electricity",
+              "note": {
+                "i18n": {
+                  "en-US": "Electricity consumption"
+                }
+              },
+              "original_name": "electricity",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "kWh"
+                }
+              }
+            }
+          ],
+          "mangled_name": "power___BoilerWorkshop__Consumption"
+        },
+        "Generation": {
+          "fields": [
+            {
+              "aggregated": true,
+              "category": [
+                "Final Product"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Electricity"
+                }
+              },
+              "name": "Generation.electricity",
+              "note": {
+                "i18n": {
+                  "en-US": "Electricity generation"
+                }
+              },
+              "original_name": "electricity",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "kWh"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Pollution"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Carbon Dioxide"
+                }
+              },
+              "name": "Generation.co2",
+              "note": {
+                "i18n": {
+                  "en-US": "Carbon Dioxide"
+                }
+              },
+              "original_name": "co2",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Steam"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "name": "Generation.steam",
+              "original_name": "steam",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            }
+          ],
+          "mangled_name": "power___BoilerWorkshop__Generation"
+        }
+      },
+      "primary_domains": {
+        "Basic": {
+          "fields": [
+            {
+              "category": [],
+              "index": false,
+              "label": {
+                "i18n": {
+                  "en-US": "Name"
+                }
+              },
+              "name": "Name",
+              "resolution": [],
+              "type": "string"
+            }
+          ],
+          "kind": "metadata",
+          "mangled_name": "power___BoilerWorkshop__Basic"
+        },
+        "Lookup": {
+          "fields": [
+            {
+              "category": [],
+              "index": true,
+              "name": "powerplant",
+              "resolution": [],
+              "type": "string"
+            },
+            {
+              "category": [],
+              "index": true,
+              "name": "workshop",
+              "resolution": [],
+              "type": "string"
+            }
+          ],
+          "kind": "lookup",
+          "mangled_name": "Lookup"
+        }
+      },
+      "rollup": true,
+      "scope": "{power}PowerPlant",
+      "secondary_domains": {},
+      "superclass": [],
+      "tags": [],
+      "timezone": "Asia/Shanghai"
+    },
+    "{power}PowerPlant": {
+      "key": "powerplant",
+      "label": {
+        "i18n": {
+          "en-US": "PowerPlant",
+          "zh-CN": "\u7535\u5382"
+        }
+      },
+      "level": 0,
+      "lookups": [
+        {
+          "lookup_domain": "Lookup",
+          "lookup_field": "powerplant",
+          "name": "default"
+        }
+      ],
+      "operational_domains": {
+        "Consumption": {
+          "fields": [
+            {
+              "aggregated": true,
+              "category": [
+                "Water"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Water"
+                }
+              },
+              "name": "Consumption.water",
+              "note": {
+                "i18n": {
+                  "en-US": "Water consumption"
+                }
+              },
+              "original_name": "water",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "m3"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Air"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Air"
+                }
+              },
+              "name": "Consumption.air",
+              "note": {
+                "i18n": {
+                  "en-US": "Air consumption"
+                }
+              },
+              "original_name": "air",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "m3"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Coal"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Coal"
+                }
+              },
+              "name": "Consumption.coal",
+              "note": {
+                "i18n": {
+                  "en-US": "Coal consumption"
+                }
+              },
+              "original_name": "coal",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Electricity"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Electricity"
+                }
+              },
+              "name": "Consumption.electricity",
+              "note": {
+                "i18n": {
+                  "en-US": "Electricity consumption"
+                }
+              },
+              "original_name": "electricity",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "kWh"
+                }
+              }
+            }
+          ],
+          "mangled_name": "power___PowerPlant__Consumption"
+        },
+        "Generation": {
+          "fields": [
+            {
+              "aggregated": true,
+              "category": [
+                "Final Product"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Electricity"
+                }
+              },
+              "name": "Generation.electricity",
+              "note": {
+                "i18n": {
+                  "en-US": "Electricity generation"
+                }
+              },
+              "original_name": "electricity",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "kWh"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Pollution"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "label": {
+                "i18n": {
+                  "en-US": "Carbon Dioxide"
+                }
+              },
+              "name": "Generation.co2",
+              "note": {
+                "i18n": {
+                  "en-US": "Carbon Dioxide"
+                }
+              },
+              "original_name": "co2",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            },
+            {
+              "aggregated": true,
+              "category": [
+                "Steam"
+              ],
+              "decimals": 2,
+              "default_stats": "sum",
+              "index": false,
+              "kind": "input",
+              "name": "Generation.steam",
+              "original_name": "steam",
+              "policy": "drop-field",
+              "resolution": [
+                "1min"
+              ],
+              "timeseries": true,
+              "type": "number",
+              "unit": {
+                "i18n": {
+                  "en-us": "t"
+                }
+              }
+            }
+          ],
+          "mangled_name": "power___PowerPlant__Generation"
+        }
+      },
+      "primary_domains": {
+        "Basic": {
+          "fields": [
+            {
+              "category": [],
+              "index": false,
+              "label": {
+                "i18n": {
+                  "en-US": "Name"
+                }
+              },
+              "name": "Name",
+              "resolution": [],
+              "type": "string"
+            }
+          ],
+          "kind": "metadata",
+          "mangled_name": "power___PowerPlant__Basic"
+        },
+        "Lookup": {
+          "fields": [
+            {
+              "category": [],
+              "index": true,
+              "name": "powerplant",
+              "resolution": [],
+              "type": "string"
+            }
+          ],
+          "kind": "lookup",
+          "mangled_name": "Lookup"
+        }
+      },
+      "rollup": true,
+      "secondary_domains": {},
+      "superclass": [],
+      "tags": [],
+      "timezone": "Asia/Shanghai"
+    }
+  },
+  "project": {
+    "lookups_enabled": false,
+    "name": "blackwalnutlabs"
+  }
+}

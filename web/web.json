@@ -1,0 +1,53 @@
+{
+  "brandImagePath": "logo.png",
+  "defaultGeo": "powerplant_p1",
+  "defaultLanguage": "zh-CN",
+  "designSpecsPath": "design.json",
+  "faviconPath": "favicon.png",
+  "languages": {
+    "en-US": "English",
+    "zh-CN": "\u7b80\u4f53\u4e2d\u6587"
+  },
+  "metadataDeviceField": "deviceId",
+  "metadataDomain": "Lookup",
+  "metricSpecsPath": "metric-specs.json",
+  "objectHierarchy": [
+    {
+      "geoStructField": "powerplant",
+      "i18n": {
+        "en-US": "PowerPlant",
+        "zh-CN": "\u7535\u5382"
+      },
+      "name": "powerplant",
+      "type": "geo"
+    },
+    {
+      "geoStructField": "workshop",
+      "i18n": {
+        "en-US": "BoilerWorkshop",
+        "zh-CN": "\u9505\u7089\u8f66\u95f4"
+      },
+      "name": "workshop",
+      "type": "geo"
+    },
+    {
+      "geoStructField": "boiler",
+      "i18n": {
+        "en-US": "Boiler",
+        "zh-CN": "\u9505\u7089"
+      },
+      "name": "boiler",
+      "type": "geo"
+    }
+  ],
+  "pageTitle": {
+    "i18n": {
+      "en-US": "/opt/thingswise/model-designer/blackwalnutlabs/blackwalnutlabs"
+    }
+  },
+  "viewTitle": {
+    "i18n": {
+      "en-US": "/opt/thingswise/model-designer/blackwalnutlabs/blackwalnutlabs"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+---
+apiVersion: thingswise.com/v1
+kind: package
+spec: {name: power}

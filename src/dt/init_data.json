@@ -1,0 +1,137 @@
+{
+  "powerplant_p1|boiler_w1|boiler_m1": {
+    "scope": "powerplant_p1|boiler_w1",
+    "mixins": {
+      "power___Boiler__Basic": {
+        "Name": "Boiler"
+      },
+      "Lookup": {
+        "class": "{power}Boiler",
+        "boiler": "boiler_m1",
+        "workshop": "boiler_w1",
+        "powerplant": "powerplant_p1"
+      }
+    },
+    "groups": [
+      {
+        "id": "Admin",
+        "name": "Admin",
+        "permissions": {
+          "powerplant_p1|boiler_w1|boiler_m1": [
+            "READ:*",
+            "WRITE:*",
+            "yoi:_admin"
+          ]
+        },
+        "i18n": {
+          "zh-CN": "管理员",
+          "en-US": "Administrator"
+        }
+      },
+      {
+        "id": "User",
+        "name": "User",
+        "permissions": {
+          "powerplant_p1|boiler_w1|boiler_m1": [
+            "READ:*"
+          ]
+        },
+        "i18n": {
+          "zh-CN": "用户",
+          "en-US": "User"
+        }
+      }
+    ]
+  },
+  "powerplant_p1|boiler_w1": {
+    "scope": "powerplant_p1",
+    "mixins": {
+      "power___BoilerWorkshop__Basic": {
+        "Name": "BoilerWorkshop"
+      },
+      "Lookup": {
+        "class": "{power}BoilerWorkshop",
+        "workshop": "boiler_w1",
+        "powerplant": "powerplant_p1"
+      }
+    },
+    "groups": [
+      {
+        "id": "Admin",
+        "name": "Admin",
+        "permissions": {
+          "powerplant_p1|boiler_w1": [
+            "READ:*",
+            "WRITE:*",
+            "yoi:_admin"
+          ]
+        },
+        "i18n": {
+          "zh-CN": "管理员",
+          "en-US": "Administrator"
+        }
+      },
+      {
+        "id": "User",
+        "name": "User",
+        "permissions": {
+          "powerplant_p1|boiler_w1": [
+            "READ:*"
+          ]
+        },
+        "i18n": {
+          "zh-CN": "用户",
+          "en-US": "User"
+        }
+      }
+    ],
+    "related": [
+      {
+        "type": "relation_0",
+        "destination": "powerplant_p1|boiler_w1|boiler_m1"
+      }
+    ]
+  },
+  "powerplant_p1": {
+    "scope": "",
+    "mixins": {
+      "power___PowerPlant__Basic": {
+        "Name": "PowerPlant"
+      },
+      "Lookup": {
+        "class": "{power}PowerPlant",
+        "powerplant": "powerplant_p1"
+      }
+    },
+    "groups": [
+      {
+        "id": "Admin",
+        "name": "Admin",
+        "permissions": {
+          "powerplant_p1": [
+            "READ:*",
+            "WRITE:*",
+            "yoi:_admin"
+          ]
+        },
+        "i18n": {
+          "zh-CN": "管理员",
+          "en-US": "Administrator"
+        }
+      },
+      {
+        "id": "User",
+        "name": "User",
+        "permissions": {
+          "powerplant_p1": [
+            "READ:*"
+          ]
+        },
+        "i18n": {
+          "zh-CN": "用户",
+          "en-US": "User"
+        }
+      }
+    ]
+  }
+}

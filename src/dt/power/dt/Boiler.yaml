@@ -1,0 +1,247 @@
+---
+apiVersion: thingswise.com/v1
+kind: entity
+metadata:
+  label:
+    i18n: {en-US: Boiler, zh-CN: 锅炉}
+spec:
+  class: Boiler
+  key: boiler
+  lookups:
+  - {lookup_domain: Lookup, lookup_field: boiler, name: default}
+  rollup: true
+  scope: BoilerWorkshop
+  superclass: []
+  tags: []
+  timezone: Asia/Shanghai
+---
+apiVersion: thingswise.com/v1
+kind: primaryDataDomain
+spec:
+  class: Boiler
+  fields:
+  - category: []
+    index: true
+    name: powerplant
+    type: string
+  - category: []
+    index: true
+    name: workshop
+    type: string
+  - category: []
+    index: true
+    name: boiler
+    type: string
+  kind: lookup
+  name: Lookup
+---
+apiVersion: thingswise.com/v1
+kind: primaryDataDomain
+spec:
+  class: Boiler
+  fields:
+  - category: []
+    label:
+      i18n: {en-US: Name}
+    name: Name
+    type: string
+  name: Basic
+---
+apiVersion: thingswise.com/v1
+kind: operationalDataDomain
+spec:
+  class: Boiler
+  fields:
+  - aggregated: false
+    category: []
+    decimals: 1
+    default_stats: avg
+    kind: direct
+    label:
+      i18n: {en-US: OutsideTemperature}
+    name: Monitoring.outside_temperature
+    original_name: outside_temperature
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: ℃}
+  - aggregated: false
+    category: []
+    decimals: 1
+    default_stats: avg
+    kind: direct
+    label:
+      i18n: {en-US: Load}
+    name: Monitoring.load
+    original_name: load
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: MW}
+  - aggregated: false
+    category: []
+    decimals: 1
+    default_stats: avg
+    kind: direct
+    label:
+      i18n: {en-US: LoadPrediction}
+    name: Monitoring.load_prediction
+    original_name: load_prediction
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: MW}
+  - aggregated: false
+    category: []
+    decimals: 1
+    default_stats: avg
+    kind: direct
+    label:
+      i18n: {en-US: SteamTemperature}
+    name: Monitoring.steam_temperature
+    original_name: steam_temperature
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: ℃}
+  - aggregated: false
+    category: []
+    decimals: 2
+    default_stats: avg
+    kind: direct
+    label:
+      i18n: {en-US: SteamPressure}
+    name: Monitoring.steam_pressure
+    original_name: steam_pressure
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: MPa}
+  name: Monitoring
+---
+apiVersion: thingswise.com/v1
+kind: operationalDataDomain
+spec:
+  class: Boiler
+  fields:
+  - aggregated: false
+    category: [Final Product]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Electricity}
+    name: Generation.electricity
+    note:
+      i18n: {en-US: Electricity generation}
+    original_name: electricity
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: kWh}
+  - aggregated: false
+    category: [Pollution]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Carbon Dioxide}
+    name: Generation.co2
+    note:
+      i18n: {en-US: Carbon Dioxide}
+    original_name: co2
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: t}
+  - aggregated: false
+    category: [Steam]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    name: Generation.steam
+    original_name: steam
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: t}
+  name: Generation
+---
+apiVersion: thingswise.com/v1
+kind: operationalDataDomain
+spec:
+  class: Boiler
+  fields:
+  - aggregated: false
+    category: [Water]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Water}
+    name: Consumption.water
+    note:
+      i18n: {en-US: Water consumption}
+    original_name: water
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: m3}
+  - aggregated: false
+    category: [Air]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Air}
+    name: Consumption.air
+    note:
+      i18n: {en-US: Air consumption}
+    original_name: air
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: m3}
+  - aggregated: false
+    category: [Coal]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Coal}
+    name: Consumption.coal
+    note:
+      i18n: {en-US: Coal consumption}
+    original_name: coal
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: t}
+  - aggregated: false
+    category: [Electricity]
+    decimals: 2
+    default_stats: sum
+    kind: input
+    label:
+      i18n: {en-US: Electricity}
+    name: Consumption.electricity
+    note:
+      i18n: {en-US: Electricity consumption}
+    original_name: electricity
+    resolution: [1min]
+    timeseries: true
+    type: number
+    unit:
+      i18n: {en-us: kWh}
+  name: Consumption

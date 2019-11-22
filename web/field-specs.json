@@ -1,0 +1,254 @@
+{
+  "Consumption.water": {
+    "category": "Water",
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Water"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Water consumption"
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "m3"
+      }
+    }
+  },
+  "Consumption.air": {
+    "category": "Air",
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Air"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Air consumption"
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "m3"
+      }
+    }
+  },
+  "Consumption.coal": {
+    "category": "Coal",
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Coal"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Coal consumption"
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "t"
+      }
+    }
+  },
+  "Consumption.electricity": {
+    "category": "Electricity",
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Electricity"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Electricity consumption"
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "kWh"
+      }
+    }
+  },
+  "Generation.electricity": {
+    "category": "Final Product",
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Electricity"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Electricity generation"
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "kWh"
+      }
+    }
+  },
+  "Generation.co2": {
+    "category": "Pollution",
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Carbon Dioxide"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Carbon Dioxide"
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "t"
+      }
+    }
+  },
+  "Generation.steam": {
+    "category": "Steam",
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": null
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": null
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "t"
+      }
+    }
+  },
+  "Monitoring.outside_temperature": {
+    "category": null,
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "OutsideTemperature"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": null
+      }
+    },
+    "decimal": 1,
+    "unit": {
+      "i18n": {
+        "en-us": "℃"
+      }
+    }
+  },
+  "Monitoring.load": {
+    "category": null,
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "Load"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": null
+      }
+    },
+    "decimal": 1,
+    "unit": {
+      "i18n": {
+        "en-us": "MW"
+      }
+    }
+  },
+  "Monitoring.load_prediction": {
+    "category": null,
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "LoadPrediction"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": null
+      }
+    },
+    "decimal": 1,
+    "unit": {
+      "i18n": {
+        "en-us": "MW"
+      }
+    }
+  },
+  "Monitoring.steam_temperature": {
+    "category": null,
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "SteamTemperature"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": null
+      }
+    },
+    "decimal": 1,
+    "unit": {
+      "i18n": {
+        "en-us": "℃"
+      }
+    }
+  },
+  "Monitoring.steam_pressure": {
+    "category": null,
+    "name": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": "SteamPressure"
+      }
+    },
+    "note": {
+      "i18n": {
+        "zh-CN": null,
+        "en-US": null
+      }
+    },
+    "decimal": 2,
+    "unit": {
+      "i18n": {
+        "en-us": "MPa"
+      }
+    }
+  }
+}

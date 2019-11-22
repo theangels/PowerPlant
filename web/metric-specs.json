@@ -1,0 +1,621 @@
+{
+  "metricSpecs": {
+    "Consumption.air": {
+      "category": [
+        "Air"
+      ],
+      "decimal": 2,
+      "default-stats": "sum",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler",
+        "{power}BoilerWorkshop",
+        "{power}PowerPlant"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Air"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Air (Consumption)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Air consumption"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "periods": [
+              "1min"
+            ],
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              },
+              "periods": [
+                "1min"
+              ]
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "m3"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Consumption.coal": {
+      "category": [
+        "Coal"
+      ],
+      "decimal": 2,
+      "default-stats": "sum",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler",
+        "{power}BoilerWorkshop",
+        "{power}PowerPlant"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Coal"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Coal (Consumption)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Coal consumption"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "periods": [
+              "1min"
+            ],
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              },
+              "periods": [
+                "1min"
+              ]
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "t"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Consumption.electricity": {
+      "category": [
+        "Electricity"
+      ],
+      "decimal": 2,
+      "default-stats": "sum",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler",
+        "{power}BoilerWorkshop",
+        "{power}PowerPlant"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Electricity"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Electricity (Consumption)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Electricity consumption"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "periods": [
+              "1min"
+            ],
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              },
+              "periods": [
+                "1min"
+              ]
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "kWh"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Consumption.water": {
+      "category": [
+        "Water"
+      ],
+      "decimal": 2,
+      "default-stats": "sum",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler",
+        "{power}BoilerWorkshop",
+        "{power}PowerPlant"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Water"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Water (Consumption)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Water consumption"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "periods": [
+              "1min"
+            ],
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              },
+              "periods": [
+                "1min"
+              ]
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "m3"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Generation.co2": {
+      "category": [
+        "Pollution"
+      ],
+      "decimal": 2,
+      "default-stats": "sum",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler",
+        "{power}BoilerWorkshop",
+        "{power}PowerPlant"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Carbon Dioxide"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Carbon Dioxide (Generation)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Carbon Dioxide"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "periods": [
+              "1min"
+            ],
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              },
+              "periods": [
+                "1min"
+              ]
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "t"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Generation.electricity": {
+      "category": [
+        "Final Product"
+      ],
+      "decimal": 2,
+      "default-stats": "sum",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler",
+        "{power}BoilerWorkshop",
+        "{power}PowerPlant"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Electricity"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Electricity (Generation)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Electricity generation"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "periods": [
+              "1min"
+            ],
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              },
+              "periods": [
+                "1min"
+              ]
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "kWh"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Generation.steam": {
+      "category": [
+        "Steam"
+      ],
+      "decimal": 2,
+      "default-stats": "sum",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler",
+        "{power}BoilerWorkshop",
+        "{power}PowerPlant"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Generation.steam"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Generation.steam (Generation)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Generation.steam"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "periods": [
+              "1min"
+            ],
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              },
+              "periods": [
+                "1min"
+              ]
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "t"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Monitoring.load": {
+      "decimal": 1,
+      "default-stats": "avg",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "Load"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "Load (Monitoring)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "Load"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "MW"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Monitoring.load_prediction": {
+      "decimal": 1,
+      "default-stats": "avg",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "LoadPrediction"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "LoadPrediction (Monitoring)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "LoadPrediction"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "MW"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Monitoring.outside_temperature": {
+      "decimal": 1,
+      "default-stats": "avg",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "OutsideTemperature"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "OutsideTemperature (Monitoring)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "OutsideTemperature"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "\u2103"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Monitoring.steam_pressure": {
+      "decimal": 2,
+      "default-stats": "avg",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "SteamPressure"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "SteamPressure (Monitoring)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "SteamPressure"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "MPa"
+        }
+      },
+      "valueType": "number:statistics"
+    },
+    "Monitoring.steam_temperature": {
+      "decimal": 1,
+      "default-stats": "avg",
+      "hierarchy": [
+        "powerplant|workshop|boiler"
+      ],
+      "model": [
+        "{power}Boiler"
+      ],
+      "name": {
+        "i18n": {
+          "en-US": "SteamTemperature"
+        }
+      },
+      "nameWithDomain": {
+        "i18n": {
+          "en-US": "SteamTemperature (Monitoring)"
+        }
+      },
+      "note": {
+        "i18n": {
+          "en-US": "SteamTemperature"
+        }
+      },
+      "querySpecs": {
+        "timeseries": {
+          "powerplant": {
+            "workshop": {
+              "boiler": {
+                "periods": [
+                  "1min"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "timezone": "Asia/Shanghai",
+      "unit": {
+        "i18n": {
+          "en-us": "\u2103"
+        }
+      },
+      "valueType": "number:statistics"
+    }
+  }
+}
